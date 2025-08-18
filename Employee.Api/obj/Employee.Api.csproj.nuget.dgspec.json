@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VSOFT\\source\\repos\\Employee.Api\\Employee.Api\\Employee.Api.csproj": {}
+    "C:\\Users\\VSOFT\\source\\repos\\EmployeeAPI\\Employee.Api\\Employee.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VSOFT\\source\\repos\\Employee.Api\\Employee.Api\\Employee.Api.csproj": {
+    "C:\\Users\\VSOFT\\source\\repos\\EmployeeAPI\\Employee.Api\\Employee.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VSOFT\\source\\repos\\Employee.Api\\Employee.Api\\Employee.Api.csproj",
+        "projectUniqueName": "C:\\Users\\VSOFT\\source\\repos\\EmployeeAPI\\Employee.Api\\Employee.Api.csproj",
         "projectName": "Employee.Api",
-        "projectPath": "C:\\Users\\VSOFT\\source\\repos\\Employee.Api\\Employee.Api\\Employee.Api.csproj",
+        "projectPath": "C:\\Users\\VSOFT\\source\\repos\\EmployeeAPI\\Employee.Api\\Employee.Api.csproj",
         "packagesPath": "C:\\Users\\VSOFT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VSOFT\\source\\repos\\Employee.Api\\Employee.Api\\obj\\",
+        "outputPath": "C:\\Users\\VSOFT\\source\\repos\\EmployeeAPI\\Employee.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

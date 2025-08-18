@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\VSOFT\\source\\repos\\EmployeeAPI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E512E89E-6496-4498-BCD6-EE3D5F782A64}|Employee.Api\\Employee.Api.csproj|c:\\users\\vsoft\\source\\repos\\employeeapi\\employee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E512E89E-6496-4498-BCD6-EE3D5F782A64}|Employee.Api\\Employee.Api.csproj|solutionrelative:employee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +35,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\VSOFT\\source\\repos\\EmployeeAPI\\Employee.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Employee.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\VSOFT\\source\\repos\\EmployeeAPI\\Employee.Api\\Program.cs",
+              "RelativeToolTip": "Employee.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T11:45:30.014Z",
+              "EditorCaption": ""
             }
           ]
         }
