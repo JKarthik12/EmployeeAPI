@@ -16,6 +16,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+Console.WriteLine("Hello, World!");
+
 app.UseAuthorization();
 
 app.MapControllers();
