@@ -1,8 +1,11 @@
 ﻿namespace Employee.Api.Models.Domain;
+using Newtonsoft.Json;
 
 
-    public class Employees
+
+public class Employees
     {
+        //[JsonIgnore]
         public int Id { get; set; }
         public required string Name { get; set; }
         public required string Email { get; set; }

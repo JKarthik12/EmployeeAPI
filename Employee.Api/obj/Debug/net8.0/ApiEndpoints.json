@@ -34,7 +34,7 @@
   {
     "ContainingType": "Employee.Api.Controllers.DepartmentsController",
     "Method": "GetAll",
-    "RelativePath": "api/Departments/Depts",
+    "RelativePath": "api/Departments/depts",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -44,7 +44,7 @@
   {
     "ContainingType": "Employee.Api.Controllers.DepartmentsController",
     "Method": "GetById",
-    "RelativePath": "api/Departments/getById",
+    "RelativePath": "api/Departments/get-by-id",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -117,6 +117,22 @@
   },
   {
     "ContainingType": "EmployeesController",
+    "Method": "Create",
+    "RelativePath": "Employees",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employee",
+        "Type": "Employee.Api.Models.Domain.Employees",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EmployeesController",
     "Method": "Update",
     "RelativePath": "Employees",
     "HttpMethod": "PUT",
@@ -139,7 +155,7 @@
   {
     "ContainingType": "EmployeesController",
     "Method": "GetById",
-    "RelativePath": "Employees/empById",
+    "RelativePath": "Employees/emp-by-id",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -155,7 +171,7 @@
   {
     "ContainingType": "EmployeesController",
     "Method": "Delete",
-    "RelativePath": "Employees/empDeleteId",
+    "RelativePath": "Employees/empDelete-id",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -164,22 +180,6 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EmployeesController",
-    "Method": "Create",
-    "RelativePath": "Employees/employee",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "employee",
-        "Type": "Employee.Api.Models.Domain.Employees",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": []

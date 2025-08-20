@@ -16,17 +16,30 @@ public class EmployeesController : ControllerBase
         return Ok(data.emp);
     }
 
-    [HttpPost("employee")]
+    [HttpPost]
     public IActionResult Create(Employees employee)
     {
         var data = dbService.Load();
 
+        int newId = data.emp.Any() ? data.emp.Max(e => e.Id) + 1 : 1;
+        employee.Id = newId;
+        if (DepartmentMap.DeptMappings.TryGetValue(employee.Departments, out string deptName))
+        {
+            employee.Departments = deptName;
+        }
+        else
+        {
+            return BadRequest($"Invalid department number: {employee.Departments}");
+        }
+
+
         data.emp.Add(employee);
         dbService.Save(data);
+
         return CreatedAtAction(nameof(GetById), new { id = employee.Id }, employee);
     }
 
-    [HttpGet("empById")]
+    [HttpGet("emp-by-id")]
     public IActionResult GetById(int id)
     {
         var data = dbService.Load();
@@ -53,7 +66,7 @@ public class EmployeesController : ControllerBase
         return Ok(emp);
     }
 
-    [HttpDelete("empDeleteId")]
+    [HttpDelete("empDelete-id")]
     public IActionResult Delete(int id)
     {
         var data = dbService.Load();

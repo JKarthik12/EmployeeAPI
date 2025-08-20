@@ -6,7 +6,7 @@ namespace Employee.Api.Services
 {
     public class EmpDatabaseService
     {
-        private readonly string filePath = "C:\\Users\\VSOFT\\source\\repos\\Employee.Api\\Employee.Api\\Data\\Details.json";
+        private readonly string filePath = "C:\\Users\\VSOFT\\source\\repos\\EmployeeAPI\\Employee.Api\\Data\\Details.json";
 
         public DataStore Load()
         {

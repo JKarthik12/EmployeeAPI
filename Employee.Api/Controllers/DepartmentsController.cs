@@ -10,7 +10,7 @@ namespace Employee.Api.Controllers
     public class DepartmentsController : ControllerBase
     {
         private readonly DeptDatabaseService dbService = new();
-        [HttpGet("Depts")]
+        [HttpGet("depts")]
         public IActionResult GetAll()
         {
             var data = dbService.DeptLoad();
@@ -26,7 +26,7 @@ namespace Employee.Api.Controllers
             return CreatedAtAction(nameof(GetById), new { id = department.Id }, department);
         }
 
-        [HttpGet("getById")]
+        [HttpGet("get-by-id")]
         public IActionResult GetById(int id)
         {
             var data = dbService.DeptLoad();
