@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        input, button {
+            margin: 5px 0;
+            padding: 6px;
+            display: block;
+            width: 300px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Employee Management</h1>
+
+    <!-- Form to Add Employee -->
+    <h3>Add New Employee</h3>
+    <form id="employeeForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="number" id="phoneNumber" placeholder="Phone Number" required>
+        <input type="number" id="salary" placeholder="Salary" required>
+        <input type="text" id="departments" placeholder="Department (e.g., 1, 2, 3...)" required>
+        <input type="number" id="roleId" placeholder="Role ID" required>
+        <button type="submit">Add Employee</button>
+        <div class="error" id="errorMsg"></div>
+    </form>
+
+    <!-- Display List -->
+    <h3>Employee List</h3>
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Salary</th>
+                <th>Departments</th>
+                <th>Role ID</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:5017/employees'; // Update port if needed
+
+        // Load all employees
+        async function loadEmployees() {
+            const res = await fetch(`${API_BASE_URL}/employees`);
+            const employees = await res.json();
+
+            const tbody = document.querySelector("#employeeTable tbody");
+            tbody.innerHTML = '';
+
+            employees.forEach(emp => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                        <td>${emp.id}</td>
+                        <td>${emp.name}</td>
+                        <td>${emp.email}</td>
+                        <td>${emp.phoneNumber}</td>
+                        <td>${emp.salary}</td>
+                        <td>${emp.departments}</td>
+                        <td>${emp.roleId}</td>
+                    `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Handle form submit
+document.getElementById("employeeForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    document.getElementById("errorMsg").textContent = "";
+
+    const employee = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phoneNumber: parseInt(document.getElementById("phoneNumber").value),
+        salary: parseFloat(document.getElementById("salary").value),
+        departments: document.getElementById("departments").value.trim(),
+        roleId: parseInt(document.getElementById("roleId").value)
+    };
+
+    console.log("Sending payload:", JSON.stringify(employee, null, 2));
+
+    try {
+        const response = await fetch(`${API_BASE_URL}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(employee)
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            document.getElementById("errorMsg").textContent = `Error: ${errorText}`;
+            return;
+        }
+
+        loadEmployees(); // Refresh list
+        this.reset(); // Clear form
+    } catch (err) {
+        console.error("Fetch error:", err);
+        document.getElementById("errorMsg").textContent = "Could not connect to backend.";
+    }
+});
+
+
+
+        // Load on page load
+        loadEmployees();
+    </script>
+
+</body>
+</html>

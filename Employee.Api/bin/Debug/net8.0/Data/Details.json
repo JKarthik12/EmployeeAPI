@@ -1,3 +1,60 @@
 {
-
+  "emp": [
+    {
+      "Id": 1,
+      "Name": "string",
+      "Email": "string",
+      "PhoneNumber": 0,
+      "Salary": 0.0,
+      "Departments": "IT",
+      "RoleId": 0
+    },
+    {
+      "Id": 2,
+      "Name": "karthikj",
+      "Email": "karthikkiru12@gmail.com",
+      "PhoneNumber": 39,
+      "Salary": 12324.0,
+      "Departments": "IT",
+      "RoleId": 123
+    },
+    {
+      "Id": 3,
+      "Name": "karthik j",
+      "Email": "karthikkiru12@gmail.com",
+      "PhoneNumber": 392020072,
+      "Salary": 12324.0,
+      "Departments": "IT",
+      "RoleId": 123
+    },
+    {
+      "Id": 4,
+      "Name": "karthik j",
+      "Email": "karthikkiru12@gmail.com",
+      "PhoneNumber": 392020072,
+      "Salary": 1232143.0,
+      "Departments": "IT",
+      "RoleId": 123
+    },
+    {
+      "Id": 5,
+      "Name": "karthik j",
+      "Email": "karthikkiru12@gmail.com",
+      "PhoneNumber": 392020072,
+      "Salary": 12324.0,
+      "Departments": "IT",
+      "RoleId": 123
+    },
+    {
+      "Id": 6,
+      "Name": "karthik j",
+      "Email": "karthikkiru12@gmail.com",
+      "PhoneNumber": 920200725,
+      "Salary": 12324.0,
+      "Departments": "IT",
+      "RoleId": 123
+    }
+  ],
+  "DeptEmp": [],
+  "EmpRole": []
 }
